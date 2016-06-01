@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>showEngineerLog</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./view/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="./view/css/public-angular-style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="./view/js/jquery.blockUI.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="./view/js/bootstrap-datepicker.min.js"></script>
+    <script src="./view/js/locales/bootstrap-datepicker.zh-TW.min.js"></script>
+    <script src="./view/js/app-controller.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <div class="container" ng-controller="indexCtrl">
+
+        <br /><br />
+
+        <form ng-submit="submit()">
+            <div class="panel panel-default ">
+
+                <div class="panel-heading">
+                    <h4>Log Monitor</h4>
+                </div>
+
+                <div class="panel-body">
+
+                    <div class="form-inline form-group ">
+                        <label for="">Name：</label>
+                        <select class="selectpicker" ng-model="ngtype">
+                            <option value="temptop">氣溫</option>
+                            <option value="windandrain">風速&雨量</option>
+                            <option value="catchlottery">樂透彩</option>
+                            <option value="feeltemp">體感溫度</option>
+                            <option value="freeway">高公局</option>
+                            <option value="aqx">PM2.5</option>
+                            <option value="uv">UV指數</option>
+                        </select>
+                    </div>
+
+                    <div class="form-inline form-group" style="clear:both">
+                        <label for="datep">Date：</label>
+                        <input type="text" id='datep' class="btn btn-default" ng-model="ngdate" required>
+                        <script>
+                            $('#datep').datepicker({
+                                format: 'yyyy/mm/dd',
+                                autoclose: true,
+                                language: 'zh-TW',
+                                todayHighlight: true
+                            });
+                        </script>
+                    </div>
+                </div>
+
+                <div class="panel-footer clearfix">
+                    <div class="pull-right">
+                        <label class="text-danger">{{sMessage}}</label>
+                        <button type="submit" id="callBlock" class="btn btn-primary">Submit</button>
+                    </div>
+                    <!--放在這邊若日期沒輸入也會觸發 BlockUI，改由 controller 觸發-->
+                    <!--<script>
+                        $(document).ready(function () {
+                            $('#callBlock').click(function () {
+                                $.blockUI({
+                                    message: '<img src="view/img/page-loader.gif" />'
+                                });
+                                //setTimeout($.unblockUI, 2000);
+                            });
+                        });
+                    </script>-->
+                </div>
+
+            </div>
+        </form>
+
+
+
+        <table class="table table-striped table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th class="col-md-2 text-center">#</th>
+                    <th class="col-md-3">Time</th>
+                    <th class="col-md-3">status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="anim-fade-enter-leave" ng-repeat="sLogData in objJson.log_data | orderBy: '-sort_id'">
+                    <td class="text-center">{{sLogData.sort_id}}</td>
+                    <td>{{sLogData.log_time.split('_')[0]}}</td>
+                    <td ng-class="sLogData.log_time.split('_')[1].toUpperCase() == 'OK' ? 'text-success' : 'text-danger'">{{sLogData.log_time.split('_')[1]}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

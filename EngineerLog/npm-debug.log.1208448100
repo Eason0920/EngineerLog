@@ -1,0 +1,102 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose readDependencies loading dependencies from D:\Project\EngineerLog\EngineerLog\package.json
+5 warn package.json engineer-log@0.0.0 No repository field.
+6 warn package.json engineer-log@0.0.0 No license field.
+7 verbose install where, deps [ 'D:\\Project\\EngineerLog\\EngineerLog', [ 'express' ] ]
+8 verbose install where, peers [ 'D:\\Project\\EngineerLog\\EngineerLog', [] ]
+9 verbose installManyTop reading for lifecycle D:\Project\EngineerLog\EngineerLog\package.json
+10 info preinstall engineer-log@0.0.0
+11 verbose installManyTop reading scoped package data from D:\Project\EngineerLog\EngineerLog\node_modules\express\package.json
+12 verbose readDependencies loading dependencies from D:\Project\EngineerLog\EngineerLog\package.json
+13 verbose targetResolver reading package data from D:\Project\EngineerLog\EngineerLog\node_modules\express\package.json
+14 silly cache add args [ 'express@lastes', null ]
+15 verbose cache add spec express@lastes
+16 silly cache add parsed spec Result {
+16 silly cache add   raw: 'express@lastes',
+16 silly cache add   scope: null,
+16 silly cache add   name: 'express',
+16 silly cache add   rawSpec: 'lastes',
+16 silly cache add   spec: 'lastes',
+16 silly cache add   type: 'tag' }
+17 silly addNamed express@lastes
+18 verbose addNamed "lastes" is being treated as a dist-tag for express
+19 info addNameTag [ 'express', 'lastes' ]
+20 silly mapToRegistry name express
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry data Result {
+23 silly mapToRegistry   raw: 'express',
+23 silly mapToRegistry   scope: null,
+23 silly mapToRegistry   name: 'express',
+23 silly mapToRegistry   rawSpec: '',
+23 silly mapToRegistry   spec: 'latest',
+23 silly mapToRegistry   type: 'tag' }
+24 silly mapToRegistry uri https://registry.npmjs.org/express
+25 verbose addNameTag registry:https://registry.npmjs.org/express not in flight; fetching
+26 verbose request uri https://registry.npmjs.org/express
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 17:52:59
+29 verbose request id d542c5eb88c00997
+30 verbose etag "4CPXDG5IQQM0LLN3VNY09XQKK"
+31 http request GET https://registry.npmjs.org/express
+32 http 304 https://registry.npmjs.org/express
+33 verbose headers { date: 'Thu, 26 May 2016 09:53:00 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   etag: '"4CPXDG5IQQM0LLN3VNY09XQKK"',
+33 verbose headers   age: '183',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-nrt6122-NRT',
+33 verbose headers   'x-cache': 'HIT',
+33 verbose headers   'x-cache-hits': '279',
+33 verbose headers   'x-timer': 'S1464256380.147788,VS0,VE0',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 silly get cb [ 304,
+34 silly get   { date: 'Thu, 26 May 2016 09:53:00 GMT',
+34 silly get     via: '1.1 varnish',
+34 silly get     'cache-control': 'max-age=300',
+34 silly get     etag: '"4CPXDG5IQQM0LLN3VNY09XQKK"',
+34 silly get     age: '183',
+34 silly get     connection: 'keep-alive',
+34 silly get     'x-served-by': 'cache-nrt6122-NRT',
+34 silly get     'x-cache': 'HIT',
+34 silly get     'x-cache-hits': '279',
+34 silly get     'x-timer': 'S1464256380.147788,VS0,VE0',
+34 silly get     vary: 'Accept-Encoding' } ]
+35 verbose etag https://registry.npmjs.org/express from cache
+36 verbose get saving express to C:\Users\eason_wang\AppData\Roaming\npm-cache\registry.npmjs.org\express\.cache.json
+37 verbose correctMkdir C:\Users\eason_wang\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+38 silly addNameTag next cb for express with tag lastes
+39 verbose stack Error: No compatible version found: express@'lastes'
+39 verbose stack Valid install targets:
+39 verbose stack ["0.14.0","0.14.1","1.0.0","1.0.1","1.0.2","1.0.3","1.0.4","1.0.5","1.0.6","1.0.7","1.0.8","2.0.0","2.1.0","2.1.1","2.2.0","2.2.1","2.2.2","2.3.0","2.3.1","2.3.2","2.3.3","2.3.4","2.3.5","2.3.6","2.3.7","2.3.8","2.3.9","2.3.10","2.3.11","2.3.12","2.4.0","2.4.1","2.4.2","2.4.3","2.4.4","2.4.5","2.4.6","2.4.7","2.5.0","2.5.1","2.5.2","2.5.3","2.5.4","2.5.5","2.5.6","2.5.7","2.5.8","2.5.9","2.5.10","2.5.11","3.0.0","3.0.1","3.0.2","3.0.3","3.0.4","3.0.5","3.0.6","3.1.0","3.1.1","3.1.2","3.2.0","3.2.1","3.2.2","3.2.3","3.2.4","3.2.5","3.2.6","3.3.0","3.3.1","3.3.2","3.3.3","3.3.4","3.3.5","3.3.6","1.0.0-beta","1.0.0-beta2","1.0.0-rc","1.0.0-rc2","1.0.0-rc3","1.0.0-rc4","2.0.0-beta","2.0.0-beta2","2.0.0-beta3","2.0.0-rc","2.0.0-rc2","2.0.0-rc3","3.0.0-alpha1","3.0.0-alpha2","3.0.0-alpha3","3.0.0-alpha4","3.0.0-alpha5","3.0.0-beta1","3.0.0-beta2","3.0.0-beta3","3.0.0-beta4","3.0.0-beta6","3.0.0-beta7","3.0.0-rc1","3.0.0-rc2","3.0.0-rc3","3.0.0-rc4","3.0.0-rc5","3.3.7","3.3.8","3.4.0","3.4.1","3.4.2","3.4.3","3.4.4","3.4.5","3.4.6","3.4.7","3.4.8","4.0.0-rc1","4.0.0-rc2","3.5.0","4.0.0-rc3","4.0.0-rc4","3.5.1","4.0.0","3.5.2","4.1.0","4.1.1","3.5.3","4.1.2","3.6.0","4.2.0","3.7.0","3.8.0","4.3.0","4.3.1","3.8.1","4.3.2","3.9.0","4.4.0","4.4.1","3.10.0","3.10.1","3.10.2","3.10.3","3.10.4","4.4.2","3.10.5","4.4.3","3.11.0","4.4.4","3.12.0","3.12.1","4.4.5","3.13.0","4.5.0","4.5.1","3.14.0","4.6.0","4.6.1","3.15.0","4.7.0","3.15.1","4.7.1","3.15.2","4.7.2","4.7.3","3.15.3","4.7.4","3.16.0","4.8.0","3.16.1","4.8.1","3.16.2","4.8.2","3.16.3","3.16.4","4.8.3","3.16.5","3.16.6","4.8.4","3.16.7","4.8.5","3.16.8","4.8.6","3.16.9","4.8.7","3.16.10","4.8.8","3.17.0","3.17.1","4.9.0","3.17.2","4.9.1","4.9.2","3.17.3","4.9.3","3.17.4","4.9.4","3.17.5","4.9.5","3.17.6","3.17.7","4.9.6","4.9.7","3.17.8","4.9.8","3.18.0","3.18.1","4.10.0","3.18.2","4.10.1","5.0.0-alpha.1","3.18.3","4.10.2","3.18.4","4.10.3","4.10.4","4.10.5","3.18.5","3.18.6","4.10.6","4.10.7","3.19.0","4.10.8","4.11.0","3.19.1","4.11.1","3.19.2","4.11.2","3.20.0","4.12.0","3.20.1","4.12.1","4.12.2","3.20.2","4.12.3","3.20.3","4.12.4","3.21.0","4.13.0","3.21.1","4.13.1","5.0.0-alpha.2","3.21.2","4.13.2","4.13.3","4.13.4"]
+39 verbose stack
+39 verbose stack     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:284:12)
+39 verbose stack     at next (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:94:10)
+39 verbose stack     at RES (C:\Program Files\nodejs\node_modules\npm\node_modules\inflight\inflight.js:23:14)
+39 verbose stack     at f (C:\Program Files\nodejs\node_modules\npm\node_modules\once\once.js:17:25)
+39 verbose stack     at fixName (C:\Program Files\nodejs\node_modules\npm\lib\cache\add-named.js:29:5)
+39 verbose stack     at saved (C:\Program Files\nodejs\node_modules\npm\lib\cache\caching-client.js:173:7)
+39 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\graceful-fs\polyfills.js:210:7
+39 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+40 verbose cwd D:\Project\EngineerLog\EngineerLog
+41 error Windows_NT 6.1.7601
+42 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+43 error node v4.4.3
+44 error npm  v2.15.1
+45 error code ETARGET
+46 error notarget No compatible version found: express@'lastes'
+46 error notarget Valid install targets:
+46 error notarget ["0.14.0","0.14.1","1.0.0","1.0.1","1.0.2","1.0.3","1.0.4","1.0.5","1.0.6","1.0.7","1.0.8","2.0.0","2.1.0","2.1.1","2.2.0","2.2.1","2.2.2","2.3.0","2.3.1","2.3.2","2.3.3","2.3.4","2.3.5","2.3.6","2.3.7","2.3.8","2.3.9","2.3.10","2.3.11","2.3.12","2.4.0","2.4.1","2.4.2","2.4.3","2.4.4","2.4.5","2.4.6","2.4.7","2.5.0","2.5.1","2.5.2","2.5.3","2.5.4","2.5.5","2.5.6","2.5.7","2.5.8","2.5.9","2.5.10","2.5.11","3.0.0","3.0.1","3.0.2","3.0.3","3.0.4","3.0.5","3.0.6","3.1.0","3.1.1","3.1.2","3.2.0","3.2.1","3.2.2","3.2.3","3.2.4","3.2.5","3.2.6","3.3.0","3.3.1","3.3.2","3.3.3","3.3.4","3.3.5","3.3.6","1.0.0-beta","1.0.0-beta2","1.0.0-rc","1.0.0-rc2","1.0.0-rc3","1.0.0-rc4","2.0.0-beta","2.0.0-beta2","2.0.0-beta3","2.0.0-rc","2.0.0-rc2","2.0.0-rc3","3.0.0-alpha1","3.0.0-alpha2","3.0.0-alpha3","3.0.0-alpha4","3.0.0-alpha5","3.0.0-beta1","3.0.0-beta2","3.0.0-beta3","3.0.0-beta4","3.0.0-beta6","3.0.0-beta7","3.0.0-rc1","3.0.0-rc2","3.0.0-rc3","3.0.0-rc4","3.0.0-rc5","3.3.7","3.3.8","3.4.0","3.4.1","3.4.2","3.4.3","3.4.4","3.4.5","3.4.6","3.4.7","3.4.8","4.0.0-rc1","4.0.0-rc2","3.5.0","4.0.0-rc3","4.0.0-rc4","3.5.1","4.0.0","3.5.2","4.1.0","4.1.1","3.5.3","4.1.2","3.6.0","4.2.0","3.7.0","3.8.0","4.3.0","4.3.1","3.8.1","4.3.2","3.9.0","4.4.0","4.4.1","3.10.0","3.10.1","3.10.2","3.10.3","3.10.4","4.4.2","3.10.5","4.4.3","3.11.0","4.4.4","3.12.0","3.12.1","4.4.5","3.13.0","4.5.0","4.5.1","3.14.0","4.6.0","4.6.1","3.15.0","4.7.0","3.15.1","4.7.1","3.15.2","4.7.2","4.7.3","3.15.3","4.7.4","3.16.0","4.8.0","3.16.1","4.8.1","3.16.2","4.8.2","3.16.3","3.16.4","4.8.3","3.16.5","3.16.6","4.8.4","3.16.7","4.8.5","3.16.8","4.8.6","3.16.9","4.8.7","3.16.10","4.8.8","3.17.0","3.17.1","4.9.0","3.17.2","4.9.1","4.9.2","3.17.3","4.9.3","3.17.4","4.9.4","3.17.5","4.9.5","3.17.6","3.17.7","4.9.6","4.9.7","3.17.8","4.9.8","3.18.0","3.18.1","4.10.0","3.18.2","4.10.1","5.0.0-alpha.1","3.18.3","4.10.2","3.18.4","4.10.3","4.10.4","4.10.5","3.18.5","3.18.6","4.10.6","4.10.7","3.19.0","4.10.8","4.11.0","3.19.1","4.11.1","3.19.2","4.11.2","3.20.0","4.12.0","3.20.1","4.12.1","4.12.2","3.20.2","4.12.3","3.20.3","4.12.4","3.21.0","4.13.0","3.21.1","4.13.1","5.0.0-alpha.2","3.21.2","4.13.2","4.13.3","4.13.4"]
+46 error notarget
+46 error notarget This is most likely not a problem with npm itself.
+46 error notarget In most cases you or one of your dependencies are requesting
+46 error notarget a package version that doesn't exist.
+46 error notarget
+46 error notarget It was specified as a dependency of 'engineer-log'
+47 verbose exit [ 1, true ]

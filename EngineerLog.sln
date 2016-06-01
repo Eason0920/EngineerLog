@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "EngineerLog", "EngineerLog\EngineerLog.njsproj", "{D57D6D44-3EDE-492D-8346-B8DD303C3096}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D57D6D44-3EDE-492D-8346-B8DD303C3096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57D6D44-3EDE-492D-8346-B8DD303C3096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57D6D44-3EDE-492D-8346-B8DD303C3096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57D6D44-3EDE-492D-8346-B8DD303C3096}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

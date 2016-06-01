@@ -1,0 +1,13 @@
+{
+  "name": "engineer-log",
+  "version": "0.0.0",
+  "description": "工程部 Log 處理 API",
+  "main": "server.js",
+  "author": {
+    "name": "eason_wang",
+    "email": "eason_wang@ebc.net.tw"
+  },
+  "dependencies": {
+    "express": "lastes"
+  }
+}
